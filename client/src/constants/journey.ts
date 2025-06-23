@@ -12,8 +12,8 @@ export const journey: Journey[] = [
         date: "2025, May",
         title: "First Hackathon Win: Educhain Semester 3 Hackathon",
         description: [
-          { text: "First time hackathon win, working solo, and winning the 1st position of Earn track. " },
-          { text: "Tweet.", link: "https://x.com/sokushuu_de/status/1925585849653268940" },
+          { text: "First time hackathon win, working solo, and winning the 1st position of Earn track. Check the " },
+          { text: "Tweet", link: "https://x.com/sokushuu_de/status/1925585849653268940" },
           { text: "." },
         ]
     },
@@ -21,8 +21,8 @@ export const journey: Journey[] = [
         date: "2025, March",
         title: "First Valid Audit Finding: Crestal Network on Sherlock",
         description: [
-          { text: "Not my first public audit contest, but my first valid high finding. " },
-          { text: "Tweet.", link: "https://x.com/sherlockdefi/status/1907122327134904791" },
+          { text: "Not my first public audit contest, but my first valid high finding. Check the tweet " },
+          { text: "Tweet", link: "https://x.com/sherlockdefi/status/1907122327134904791" },
           { text: "." },
         ]
     },
