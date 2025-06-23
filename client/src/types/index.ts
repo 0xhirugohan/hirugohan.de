@@ -38,4 +38,6 @@ export interface Project {
   youtube: string | null;
   achievements: Achievement[];
   team: TeamMember[];
+  startDate: string;
+  endDate?: string; // 'present' or date string
 }
