@@ -10,14 +10,14 @@ export const socials: Social[] = [
   },
   {
     name: "Twitter (known as X)",
-    url: "https://twitter.com/0xhirugohan",
+    url: "https://x.com/0xhirugohan",
     icon: (
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-twitter-icon lucide-twitter"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
     ),
   },
   {
     name: "Farcaster",
-    url: "https://warpcast.com/hirugohan",
+    url: "https://farcaster.xyz/hirugohan",
     icon: (
         <svg className="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="-67.863 -168.16 751.111 688.8861" width="751.111px" height="688.886px" fill="currentColor" preserveAspectRatio="none"><g id="object-0"><path d="M 61.026 -168.16 L 545.47 -168.16 L 545.47 520.726 L 474.359 520.726 L 474.359 205.17 L 473.662 205.17 C 465.802 117.958 392.506 49.614 303.248 49.614 C 213.99 49.614 140.694 117.958 132.834 205.17 L 132.137 205.17 L 132.137 520.726 L 61.026 520.726 L 61.026 -168.16 Z" stroke-width="1" fill="currentColor"/><path d="M -67.863 -70.386 L -38.974 27.392 L -14.53 27.392 L -14.53 422.948 C -26.803 422.948 -36.752 432.897 -36.752 445.17 L -36.752 471.837 L -41.196 471.837 C -53.469 471.837 -63.419 481.786 -63.419 494.059 L -63.419 520.726 L 185.47 520.726 L 185.47 494.059 C 185.47 481.786 175.521 471.837 163.248 471.837 L 158.804 471.837 L 158.804 445.17 C 158.804 432.897 148.854 422.948 136.581 422.948 L 109.915 422.948 L 109.915 -70.386 L -67.863 -70.386 Z" stroke-width="1" fill="currentColor"/><path d="M 478.804 422.948 C 466.531 422.948 456.581 432.897 456.581 445.17 L 456.581 471.837 L 452.137 471.837 C 439.864 471.837 429.915 481.786 429.915 494.059 L 429.915 520.726 L 678.804 520.726 L 678.804 494.059 C 678.804 481.786 668.854 471.837 656.581 471.837 L 652.137 471.837 L 652.137 445.17 C 652.137 432.897 642.188 422.948 629.915 422.948 L 629.915 27.392 L 654.359 27.392 L 683.248 -70.386 L 505.47 -70.386 L 505.47 422.948 L 478.804 422.948 Z" stroke-width="1" fill="currentcolor"/></g></svg>
     ),
