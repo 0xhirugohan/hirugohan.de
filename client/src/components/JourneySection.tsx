@@ -14,7 +14,7 @@ export const JourneySection: FC<JourneySectionProps> = ({ mounted, journey }) =>
         {journey.map((item, idx) => (
           <div key={idx} className="mb-8 ml-4 flex flex-col relative">
             <span className="absolute -left-6 top-1 w-4 h-4 rounded-full bg-zinc-200 dark:bg-zinc-700 border-2 border-zinc-400 dark:border-zinc-600"></span>
-            <div className="flex items-center gap-2 mb-1">
+            <div className="flex flex-col md:flex-row md:items-center gap-2 mb-1">
               <span className="text-xs text-zinc-500 dark:text-zinc-400 font-mono">{item.date}</span>
               <span className="font-semibold text-zinc-700 dark:text-zinc-200">{item.title}</span>
             </div>
