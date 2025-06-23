@@ -1,6 +1,9 @@
 import { FC, useEffect, useState } from 'react';
 import { Social } from '../types';
 import { SocialIcons } from './SocialIcons';
+import ThemeBackground from './ThemeBackground';
+import { SleepingZs } from './SleepingZs';
+import { SingingAnimation } from './SingingAnimation';
 
 interface HeroProps {
   mounted: boolean;
@@ -30,23 +33,29 @@ export const Hero: FC<HeroProps> = ({ mounted, socials, user }) => {
   }, []);
 
   return (
-    <section
-      className={`flex flex-col items-center justify-center py-16 transition-all duration-700 ${
-        mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-      }`}
-    >
-      <img
-        src={isDark ? user.avatarDark : user.avatar}
-        alt="avatar"
-        className="w-28 h-28 rounded-full shadow-lg border-4 border-zinc-200 dark:border-zinc-700 mb-4"
-      />
-      <h1 className="text-4xl font-bold text-zinc-800 dark:text-zinc-100 mb-2">
-        {user.name}
-      </h1>
-      <p className="text-zinc-600 dark:text-zinc-300 text-lg mb-4">
-        {user.bio}
-      </p>
-      <SocialIcons socials={socials} />
+    <section className="relative min-h-screen flex items-center justify-center">
+      <ThemeBackground />
+      <div
+        className={`flex flex-col items-center justify-center py-16 transition-all duration-700 ${
+          mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+        }`}
+      >
+        <div className="relative">
+          <img
+            src={isDark ? user.avatarDark : user.avatar}
+            alt="avatar"
+            className="w-28 h-28 rounded-full shadow-lg border-4 border-zinc-200 dark:border-zinc-700 mb-4"
+          />
+          {isDark ? <SleepingZs /> : <SingingAnimation />}
+        </div>
+        <h1 className="text-4xl font-bold text-zinc-800 dark:text-zinc-100 mb-2">
+          {user.name}
+        </h1>
+        <p className="text-zinc-600 dark:text-zinc-300 text-lg mb-4">
+          {user.bio}
+        </p>
+        <SocialIcons socials={socials} />
+      </div>
     </section>
   );
 };

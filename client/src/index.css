@@ -1,3 +1,33 @@
 @import "tailwindcss";
 
 @custom-variant dark (&:where(.dark, .dark *));
+
+@keyframes floatZ {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 0;
+  }
+  25% {
+    transform: translateY(-15px) scale(1.1);
+    opacity: 1;
+  }
+  75% {
+    transform: translateY(-30px) scale(1.2);
+    opacity: 0;
+  }
+}
+
+.animate-sleep-z1 {
+  animation: floatZ 3s ease-in-out infinite;
+}
+
+.animate-sleep-z2 {
+  animation: floatZ 3s ease-in-out infinite;
+  animation-delay: 0.5s;
+}
+
+.animate-sleep-z3 {
+  animation: floatZ 3s ease-in-out infinite;
+  animation-delay: 1s;
+}
