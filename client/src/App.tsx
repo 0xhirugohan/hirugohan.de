@@ -3,10 +3,14 @@ import { Hero } from "./components/Hero";
 import { JourneySection } from "./components/JourneySection";
 import { ProjectsSection } from "./components/ProjectsSection";
 import { Footer } from "./components/Footer";
+import { CustomAlert } from "./components/CustomAlert";
 import { journey, projects, socials, user } from "./constants";
 
 function App() {
 	const [mounted, setMounted] = useState(false);
+	const [hasShownRightClickMessage, setHasShownRightClickMessage] = useState(false);
+	const [alertPosition, setAlertPosition] = useState({ x: 0, y: 0 });
+	const [showAlert, setShowAlert] = useState(false);
 	const [dark, setDark] = useState(() => {
 		if (typeof window !== "undefined") {
 			return window.matchMedia("(prefers-color-scheme: dark)").matches;
@@ -17,6 +21,23 @@ function App() {
 	useEffect(() => {
 		setMounted(true);
 	}, []);
+
+	useEffect(() => {
+		const handleContextMenu = (e: MouseEvent) => {
+			e.preventDefault();
+			if (!hasShownRightClickMessage) {
+				setAlertPosition({ x: e.clientX, y: e.clientY });
+				setShowAlert(true);
+				setHasShownRightClickMessage(true);
+			}
+		};
+
+		document.addEventListener("contextmenu", handleContextMenu);
+
+		return () => {
+			document.removeEventListener("contextmenu", handleContextMenu);
+		};
+	}, [hasShownRightClickMessage]);
 
 	useEffect(() => {
 		if (dark) {
@@ -32,6 +53,13 @@ function App() {
 			<JourneySection mounted={mounted} journey={journey} />
 			<ProjectsSection mounted={mounted} projects={projects} />
 			<Footer mounted={mounted} />
+			{showAlert && (
+				<CustomAlert
+					message="Right-clicking has been disabled to protect our content. Thank you for understanding! 🙏"
+					position={alertPosition}
+					onClose={() => setShowAlert(false)}
+				/>
+			)}
 			<button
 				aria-label={
 					dark ? "Switch to light mode" : "Switch to dark mode"
